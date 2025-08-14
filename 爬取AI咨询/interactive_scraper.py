@@ -147,7 +147,16 @@ class InteractiveScraper(AINewsScraper):
                         except ValueError:
                             print("❌ 请输入有效的数字")
                 elif choice == "3":
-                    return "basic", len(page_info), False
+                    max_pages = len(page_info)
+                    while True:
+                        try:
+                            pages = int(input(f"请输入要爬取的页数 (1-{max_pages}): "))
+                            if 1 <= pages <= max_pages:
+                                return "basic", pages, False
+                            else:
+                                print(f"❌ 请输入 1-{max_pages} 之间的数字")
+                        except ValueError:
+                            print("❌ 请输入有效的数字")
                 elif choice == "4":
                     self.display_recent_articles(page_info, show_count=10)
                     continue

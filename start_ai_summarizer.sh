@@ -30,12 +30,13 @@ echo ""
 echo "🎯 选择操作："
 echo "1. 🧪 测试Friday API连接"
 echo "2. 🔍 交互式爬取文章 (推荐)"
-echo "3. 📝 运行AI文章总结"
-echo "4. 🚀 直接爬取文章 (获取完整内容)"
-echo "5. ❌ 退出"
+echo "3. 🧠 智能AI总结 (实时获取内容)"
+echo "4. 📝 传统AI文章总结"
+echo "5. 🚀 直接爬取文章 (获取完整内容)"
+echo "6. ❌ 退出"
 echo ""
 
-read -p "请输入选择 (1-5): " choice
+read -p "请输入选择 (1-6): " choice
 
 case $choice in
     1)
@@ -49,16 +50,21 @@ case $choice in
         python interactive_scraper.py
         ;;
     3)
-        echo "📝 开始文章总结..."
+        echo "🧠 启动智能AI总结..."
+        cd "AI文章智能总结"
+        python smart_summarizer.py
+        ;;
+    4)
+        echo "📝 开始传统文章总结..."
         cd "AI文章智能总结"
         python ai_article_summarizer.py
         ;;
-    4)
+    5)
         echo "🚀 开始爬取文章..."
         cd "爬取AI咨询"
         python ai_news_scraper.py
         ;;
-    5)
+    6)
         echo "👋 退出系统"
         exit 0
         ;;

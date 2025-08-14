@@ -250,9 +250,9 @@ class Book:
     """书籍类 - 演示特殊方法"""
 
     def __init__(self, title, author, pages):
-        self.title = title
-        self.author = author
-        self.pages = pages
+        self.title = title # 书名
+        self.author = author # 作者
+        self.pages = pages # 页码
 
     def __str__(self):
         """字符串表示 - print时调用"""

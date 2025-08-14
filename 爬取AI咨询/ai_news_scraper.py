@@ -147,24 +147,55 @@ class AINewsScraper:
 
         soup = BeautifulSoup(html_content, 'html.parser')
 
-        # 查找文章内容
+        # 查找文章内容 - 针对AI工具集网站的结构优化
         content_selectors = [
-            '.entry-content', '.post-content', '.article-content',
-            '.content', 'article .content', '.main-content'
+            '.entry-content',           # WordPress标准内容区域
+            '.post-content',            # 文章内容区域
+            '.article-content',         # 文章内容
+            '.content',                 # 通用内容区域
+            'article .content',         # 文章标签内的内容
+            '.main-content',            # 主要内容区域
+            '.post-body',               # 文章主体
+            '.single-content',          # 单页内容
+            '[class*="content"]',       # 包含content的类名
+            'main article',             # 主要文章区域
+            '.wp-content'               # WordPress内容
         ]
 
         content = ''
         for selector in content_selectors:
             content_elem = soup.select_one(selector)
             if content_elem:
-                # 移除脚本和样式标签
-                for script in content_elem(["script", "style"]):
-                    script.decompose()
-                content = content_elem.get_text(strip=True)
-                if len(content) > 100:  # 确保内容有足够长度
+                # 移除不需要的元素
+                for unwanted in content_elem(["script", "style", "nav", "footer", "header", ".sidebar", ".related", ".comments"]):
+                    unwanted.decompose()
+
+                # 提取文本内容
+                content = content_elem.get_text(separator='\n', strip=True)
+
+                # 清理多余的空行
+                content = '\n'.join(line.strip() for line in content.split('\n') if line.strip())
+
+                if len(content) > 200:  # 确保内容有足够长度
                     break
 
-        return content
+        # 如果没有找到合适的内容，尝试从整个页面提取
+        if not content or len(content) < 100:
+            # 移除不需要的标签
+            for unwanted in soup(["script", "style", "nav", "footer", "header", ".sidebar", ".menu", ".navigation"]):
+                unwanted.decompose()
+
+            # 尝试从body或main标签提取
+            body_content = soup.find('body') or soup.find('main')
+            if body_content:
+                content = body_content.get_text(separator='\n', strip=True)
+                content = '\n'.join(line.strip() for line in content.split('\n') if line.strip())
+
+        # 限制内容长度，避免过长
+        if len(content) > 3000:
+            content = content[:3000] + "...[内容已截断]"
+
+        return content if content else "无法获取文章详细内容"
 
     def scrape_articles(self, max_pages=5, include_content=False):
         """爬取文章"""
@@ -291,7 +322,7 @@ def main():
 
     # 配置参数
     MAX_PAGES = 3  # 爬取页数
-    INCLUDE_CONTENT = False  # 是否包含文章详细内容（会显著增加爬取时间）
+    INCLUDE_CONTENT = True  # 是否包含文章详细内容（会显著增加爬取时间，但AI总结需要）
     SAVE_FORMATS = ['json', 'csv']  # 保存格式
 
     try:

@@ -41,13 +41,18 @@ class FridayAIClient:
 
     def create_summary_prompt(self, article_data: Dict) -> str:
         """创建文章总结的提示词"""
+        # 优先使用完整文章内容，如果没有则使用描述
+        content_text = article_data.get('content', '') or article_data.get('description', '')
+
         prompt = f"""请对以下AI工具/项目文章进行专业分析和总结，提取关键信息：
 
 文章标题：{article_data.get('title', '')}
 文章分类：{article_data.get('category', '')}
 发布时间：{article_data.get('publish_time', '')}
-原始描述：{article_data.get('description', '')}
 文章链接：{article_data.get('url', '')}
+
+文章内容：
+{content_text[:2000]}{'...[内容已截断]' if len(content_text) > 2000 else ''}
 
 请按照以下格式进行总结分析：
 
@@ -276,7 +281,8 @@ def main():
     """主函数"""
     # 配置参数
     APP_ID = "21910615279495929878"  # 你的AppID
-    INPUT_FILE = "../爬取AI咨询/ai_articles_20250814_201716.json"  # 输入文件路径
+    INPUT_FILE = "爬取AI咨询/ai_articles_20250814_201716.json"  # 输入文件路径
+    
     BATCH_SIZE = 3  # 批处理大小
     DELAY = 3.0  # 批次间延迟（秒）
 

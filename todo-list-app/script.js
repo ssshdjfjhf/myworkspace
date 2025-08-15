@@ -42,6 +42,14 @@ class TodoApp {
         clearDateBtn.addEventListener('click', () => {
             document.getElementById('dueDateInput').value = '';
         });
+
+        // 快捷时间按钮
+        const quickTimeBtns = document.querySelectorAll('.quick-time-btn');
+        quickTimeBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.setQuickTime(e.target);
+            });
+        });
     }
 
     // 添加新的待办事项
@@ -158,6 +166,7 @@ class TodoApp {
                     <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''}
                            onchange="todoApp.toggleTodo(${todo.id})">
                     <span class="todo-text">${this.escapeHtml(todo.text)}</span>
+                    ${this.getDueDateDisplay(todo)}
                     ${countdownInfo.display ? `
                         <span class="countdown-display countdown-${countdownInfo.status}">
                             <i class="fas fa-clock"></i>
@@ -538,6 +547,83 @@ class TodoApp {
                 }, 300);
             }
         }, 8000);
+    }
+
+    // 设置快捷时间
+    setQuickTime(button) {
+        const dueDateInput = document.getElementById('dueDateInput');
+        const now = new Date();
+        let targetDate = new Date(now);
+
+        if (button.dataset.minutes) {
+            targetDate.setMinutes(now.getMinutes() + parseInt(button.dataset.minutes));
+        } else if (button.dataset.hours) {
+            targetDate.setHours(now.getHours() + parseInt(button.dataset.hours));
+        } else if (button.dataset.days) {
+            targetDate.setDate(now.getDate() + parseInt(button.dataset.days));
+            targetDate.setHours(9, 0, 0, 0); // 设置为上午9点
+        }
+
+        // 格式化为datetime-local输入格式
+        const year = targetDate.getFullYear();
+        const month = String(targetDate.getMonth() + 1).padStart(2, '0');
+        const day = String(targetDate.getDate()).padStart(2, '0');
+        const hours = String(targetDate.getHours()).padStart(2, '0');
+        const minutes = String(targetDate.getMinutes()).padStart(2, '0');
+
+        dueDateInput.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+    }
+
+    // 获取截止时间显示
+    getDueDateDisplay(todo) {
+        if (!todo.dueDate) {
+            return '';
+        }
+
+        const dueDate = new Date(todo.dueDate);
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const dueDateOnly = new Date(dueDate.getFullYear(), dueDate.getMonth(), dueDate.getDate());
+
+        let displayText = '';
+        let className = 'due-date-display';
+
+        // 判断是今天、明天还是其他日期
+        if (dueDateOnly.getTime() === today.getTime()) {
+            displayText = `今天 ${this.formatTime(dueDate)}`;
+            className += ' today';
+        } else if (dueDateOnly.getTime() === tomorrow.getTime()) {
+            displayText = `明天 ${this.formatTime(dueDate)}`;
+            className += ' tomorrow';
+        } else {
+            displayText = this.formatDateTime(dueDate);
+            className += ' future';
+        }
+
+        return `
+            <span class="${className}">
+                <i class="fas fa-calendar-alt"></i>
+                ${displayText}
+            </span>
+        `;
+    }
+
+    // 格式化时间（只显示时分）
+    formatTime(date) {
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        return `${hours}:${minutes}`;
+    }
+
+    // 格式化日期时间
+    formatDateTime(date) {
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        return `${month}/${day} ${hours}:${minutes}`;
     }
 }
 

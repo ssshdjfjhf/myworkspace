@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项清单</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-tasks"></i> 我的待办清单</h1>
+            <p class="subtitle">高效管理你的日常任务</p>
+        </header>
+
+        <div class="todo-container">
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input type="text" id="todoInput" placeholder="添加新的待办事项..." maxlength="100">
+                    <button id="addBtn" class="add-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="priority-selector">
+                    <label>优先级：</label>
+                    <select id="prioritySelect">
+                        <option value="low">低</option>
+                        <option value="medium" selected>中</option>
+                        <option value="high">高</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="pending">待完成</button>
+                    <button class="filter-btn" data-filter="completed">已完成</button>
+                </div>
+                <div class="stats">
+                    <span id="totalTasks">0</span> 个任务，
+                    <span id="completedTasks">0</span> 个已完成
+                </div>
+            </div>
+
+            <div class="todo-list" id="todoList">
+                <!-- 待办事项将在这里动态生成 -->
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>暂无待办事项</h3>
+                <p>添加你的第一个任务开始使用吧！</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 待办清单应用 - 让生活更有条理</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

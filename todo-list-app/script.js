@@ -3,6 +3,8 @@ class TodoApp {
     constructor() {
         this.todos = this.loadTodos();
         this.currentFilter = 'all';
+        this.countdownTimer = null;
+        this.reminderChecked = new Set(); // 记录已提醒的任务
         this.init();
     }
 
@@ -11,6 +13,7 @@ class TodoApp {
         this.bindEvents();
         this.render();
         this.updateStats();
+        this.startCountdownTimer();
     }
 
     // 绑定事件监听器
@@ -18,6 +21,7 @@ class TodoApp {
         const todoInput = document.getElementById('todoInput');
         const addBtn = document.getElementById('addBtn');
         const filterBtns = document.querySelectorAll('.filter-btn');
+        const clearDateBtn = document.getElementById('clearDateBtn');
 
         // 添加待办事项
         addBtn.addEventListener('click', () => this.addTodo());
@@ -33,12 +37,18 @@ class TodoApp {
                 this.setFilter(e.target.dataset.filter);
             });
         });
+
+        // 清除时间按钮
+        clearDateBtn.addEventListener('click', () => {
+            document.getElementById('dueDateInput').value = '';
+        });
     }
 
     // 添加新的待办事项
     addTodo() {
         const todoInput = document.getElementById('todoInput');
         const prioritySelect = document.getElementById('prioritySelect');
+        const dueDateInput = document.getElementById('dueDateInput');
         const text = todoInput.value.trim();
 
         if (text === '') {
@@ -51,6 +61,7 @@ class TodoApp {
             text: text,
             completed: false,
             priority: prioritySelect.value,
+            dueDate: dueDateInput.value || null,
             createdAt: new Date().toISOString()
         };
 
@@ -62,6 +73,7 @@ class TodoApp {
         // 清空输入框
         todoInput.value = '';
         prioritySelect.value = 'medium';
+        dueDateInput.value = '';
 
         this.showNotification('待办事项添加成功！', 'success');
     }
@@ -131,19 +143,36 @@ class TodoApp {
 
         emptyState.classList.remove('show');
 
-        todoList.innerHTML = filteredTodos.map(todo => `
-            <div class="todo-item ${todo.completed ? 'completed' : ''} ${todo.priority}-priority" data-id="${todo.id}">
-                <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''}
-                       onchange="todoApp.toggleTodo(${todo.id})">
-                <span class="todo-text">${this.escapeHtml(todo.text)}</span>
-                <span class="priority-badge priority-${todo.priority}">
-                    ${this.getPriorityText(todo.priority)}
-                </span>
-                <button class="delete-btn" onclick="todoApp.deleteTodo(${todo.id})" title="删除">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div>
-        `).join('');
+        todoList.innerHTML = filteredTodos.map(todo => {
+            const countdownInfo = this.getCountdownInfo(todo);
+            const itemClasses = [
+                'todo-item',
+                todo.completed ? 'completed' : '',
+                `${todo.priority}-priority`,
+                countdownInfo.status === 'overdue' ? 'overdue' : '',
+                countdownInfo.status === 'urgent' ? 'urgent' : ''
+            ].filter(Boolean).join(' ');
+
+            return `
+                <div class="${itemClasses}" data-id="${todo.id}">
+                    <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''}
+                           onchange="todoApp.toggleTodo(${todo.id})">
+                    <span class="todo-text">${this.escapeHtml(todo.text)}</span>
+                    ${countdownInfo.display ? `
+                        <span class="countdown-display countdown-${countdownInfo.status}">
+                            <i class="fas fa-clock"></i>
+                            ${countdownInfo.display}
+                        </span>
+                    ` : ''}
+                    <span class="priority-badge priority-${todo.priority}">
+                        ${this.getPriorityText(todo.priority)}
+                    </span>
+                    <button class="delete-btn" onclick="todoApp.deleteTodo(${todo.id})" title="删除">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+        }).join('');
     }
 
     // 更新统计信息
@@ -308,6 +337,207 @@ class TodoApp {
             }
         };
         reader.readAsText(file);
+    }
+
+    // 启动倒计时定时器
+    startCountdownTimer() {
+        // 清除现有定时器
+        if (this.countdownTimer) {
+            clearInterval(this.countdownTimer);
+        }
+
+        // 每分钟更新一次倒计时
+        this.countdownTimer = setInterval(() => {
+            this.updateCountdowns();
+            this.checkReminders();
+        }, 60000); // 60秒更新一次
+
+        // 立即执行一次
+        this.updateCountdowns();
+        this.checkReminders();
+    }
+
+    // 更新倒计时显示
+    updateCountdowns() {
+        this.render();
+    }
+
+    // 检查提醒
+    checkReminders() {
+        const now = new Date();
+
+        this.todos.forEach(todo => {
+            if (!todo.completed && todo.dueDate && !this.reminderChecked.has(todo.id)) {
+                const dueDate = new Date(todo.dueDate);
+                const timeDiff = dueDate.getTime() - now.getTime();
+                const minutesDiff = Math.floor(timeDiff / (1000 * 60));
+
+                // 提前30分钟提醒
+                if (minutesDiff <= 30 && minutesDiff > 0) {
+                    this.showReminderNotification(todo, minutesDiff);
+                    this.reminderChecked.add(todo.id);
+                }
+                // 已过期提醒
+                else if (minutesDiff <= 0 && minutesDiff > -60) {
+                    this.showOverdueNotification(todo, Math.abs(minutesDiff));
+                    this.reminderChecked.add(todo.id);
+                }
+            }
+        });
+    }
+
+    // 获取倒计时信息
+    getCountdownInfo(todo) {
+        if (!todo.dueDate || todo.completed) {
+            return { display: null, status: 'normal' };
+        }
+
+        const now = new Date();
+        const dueDate = new Date(todo.dueDate);
+        const timeDiff = dueDate.getTime() - now.getTime();
+
+        if (timeDiff < 0) {
+            // 已过期
+            const overdueDays = Math.floor(Math.abs(timeDiff) / (1000 * 60 * 60 * 24));
+            const overdueHours = Math.floor((Math.abs(timeDiff) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const overdueMinutes = Math.floor((Math.abs(timeDiff) % (1000 * 60 * 60)) / (1000 * 60));
+
+            let display = '已过期 ';
+            if (overdueDays > 0) {
+                display += `${overdueDays}天`;
+            } else if (overdueHours > 0) {
+                display += `${overdueHours}小时`;
+            } else {
+                display += `${overdueMinutes}分钟`;
+            }
+
+            return { display, status: 'overdue' };
+        }
+
+        // 计算剩余时间
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+        let display = '';
+        if (days > 0) {
+            display = `${days}天${hours}小时`;
+        } else if (hours > 0) {
+            display = `${hours}小时${minutes}分钟`;
+        } else {
+            display = `${minutes}分钟`;
+        }
+
+        // 确定状态
+        let status = 'normal';
+        if (timeDiff <= 30 * 60 * 1000) { // 30分钟内
+            status = 'urgent';
+        } else if (timeDiff <= 2 * 60 * 60 * 1000) { // 2小时内
+            status = 'warning';
+        }
+
+        return { display, status };
+    }
+
+    // 显示提醒通知
+    showReminderNotification(todo, minutesLeft) {
+        const notification = document.createElement('div');
+        notification.className = 'reminder-notification';
+        notification.innerHTML = `
+            <i class="fas fa-bell"></i>
+            <div>
+                <strong>任务提醒</strong><br>
+                <span>${this.escapeHtml(todo.text)}</span><br>
+                <small>还有 ${minutesLeft} 分钟到期</small>
+            </div>
+            <button class="close-btn" onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+
+        // 创建通知容器（如果不存在）
+        let container = document.querySelector('.notification-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'notification-container';
+            document.body.appendChild(container);
+        }
+
+        container.appendChild(notification);
+
+        // 点击通知跳转到对应任务
+        notification.addEventListener('click', (e) => {
+            if (!e.target.closest('.close-btn')) {
+                const todoElement = document.querySelector(`[data-id="${todo.id}"]`);
+                if (todoElement) {
+                    todoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    todoElement.style.animation = 'pulse 2s ease-in-out';
+                }
+            }
+        });
+
+        // 5秒后自动消失
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }
+        }, 5000);
+    }
+
+    // 显示过期通知
+    showOverdueNotification(todo, minutesOverdue) {
+        const notification = document.createElement('div');
+        notification.className = 'reminder-notification';
+        notification.style.background = 'linear-gradient(135deg, #dc3545, #c82333)';
+        notification.innerHTML = `
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <strong>任务已过期</strong><br>
+                <span>${this.escapeHtml(todo.text)}</span><br>
+                <small>已过期 ${minutesOverdue} 分钟</small>
+            </div>
+            <button class="close-btn" onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+
+        // 创建通知容器（如果不存在）
+        let container = document.querySelector('.notification-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'notification-container';
+            document.body.appendChild(container);
+        }
+
+        container.appendChild(notification);
+
+        // 点击通知跳转到对应任务
+        notification.addEventListener('click', (e) => {
+            if (!e.target.closest('.close-btn')) {
+                const todoElement = document.querySelector(`[data-id="${todo.id}"]`);
+                if (todoElement) {
+                    todoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    todoElement.style.animation = 'pulse 2s ease-in-out';
+                }
+            }
+        });
+
+        // 8秒后自动消失
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }
+        }, 8000);
     }
 }
 

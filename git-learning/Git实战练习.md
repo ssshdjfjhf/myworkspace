@@ -17,6 +17,7 @@
 git --version
 ```
 如果没有安装，请先安装Git。
+git version 2.39.5 (Apple Git-154)
 
 ### 配置Git（如果还没配置）
 ```bash
@@ -48,12 +49,24 @@ echo "这是一个学习Git的练习项目" >> README.md
 ```bash
 # 查看状态
 git status
+-- None
 
 # 添加文件到暂存区
 git add README.md
 
 # 再次查看状态
 git status
+
+---
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+--- 
+
 
 # 提交到版本库
 git commit -m "feat: 添加README文件"
@@ -201,7 +214,7 @@ git commit -m "feat: 添加JavaScript交互功能"
 ### 步骤4：切换回主分支并合并
 ```bash
 # 切换回主分支
-git checkout master
+git checkout main
 
 # 查看文件（注意JavaScript功能不在这里）
 ls

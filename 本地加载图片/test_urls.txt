@@ -1,0 +1,22 @@
+# 测试URL列表 - 用于验证批量输入功能
+
+# 格式1：每行一个URL
+https://picsum.photos/300/200?random=1
+https://picsum.photos/300/200?random=2
+https://picsum.photos/300/200?random=3
+
+# 格式2：逗号分隔的URL
+https://picsum.photos/300/200?random=4, https://picsum.photos/300/200?random=5, https://picsum.photos/300/200?random=6
+
+# 格式3：带引号的URL
+"https://picsum.photos/300/200?random=7"
+'https://picsum.photos/300/200?random=8'
+
+# 格式4：混合格式
+https://picsum.photos/300/200?random=9, https://picsum.photos/300/200?random=10
+https://picsum.photos/300/200?random=11
+
+# 无效URL示例（用于测试验证功能）
+not-a-valid-url
+http://invalid
+ftp://example.com

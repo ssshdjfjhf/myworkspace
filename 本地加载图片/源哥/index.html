@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片批量加载工具</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-container img {
+            margin: 10px;
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>批量加载图片工具</h1>
+    <input type="text" id="urlInput" placeholder="输入图片URL，用逗号分隔">
+    <button onclick="loadImages()">加载图片</button>
+    <input type="file" id="fileInput" accept=".xlsx">
+    <button onclick="loadFromExcel()">从Excel加载</button>
+    <div class="image-container" id="imageContainer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

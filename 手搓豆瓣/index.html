@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h1 class="logo">
+                    <a href="/">豆瓣</a>
+                </h1>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/cinema/nowplaying/">影讯&购票</a></li>
+                        <li><a href="/explore">选电影</a></li>
+                        <li><a href="/tv">选剧集</a></li>
+                        <li><a href="/chart">排行榜</a></li>
+                        <li><a href="/review/best/">影评</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索电影、电视剧、影人" id="searchInput">
+                    <button class="search-btn" id="searchBtn">搜索</button>
+                </div>
+                <div class="user-actions">
+                    <a href="/login" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 左侧主内容 -->
+            <div class="main-section">
+                <!-- 正在热映 -->
+                <section class="now-playing-section">
+                    <div class="section-header">
+                        <div>
+                            <h2 class="section-title">正在热映</h2>
+                            <p class="section-subtitle">北京地区实时热映电影</p>
+                        </div>
+                        <div class="section-controls">
+                            <span class="movie-count" id="nowPlayingCount">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="movie-scroll-container">
+                        <div class="movie-scroll" id="nowPlayingMovies">
+                            <div class="loading">正在加载热映电影...</div>
+                        </div>
+                    </div>
+                    <div class="pagination-area" id="nowPlayingPagination">
+                        <!-- 分页控件将在这里动态生成 -->
+                    </div>
+                </section>
+
+                <!-- 最近热门电影 -->
+                <section class="hot-movies-section">
+                    <div class="section-header">
+                        <h2>最近热门电影</h2>
+                        <div class="filter-tabs">
+                            <button class="tab-btn active" data-category="hot">热门</button>
+                            <button class="tab-btn" data-category="latest">最新</button>
+                            <button class="tab-btn" data-category="high-rated">豆瓣高分</button>
+                            <button class="tab-btn" data-category="hidden-gems">冷门佳片</button>
+                        </div>
+                        <a href="/explore" class="more-link">更多>></a>
+                    </div>
+                    <div class="movies-grid" id="hotMoviesGrid">
+                        <!-- 热门电影将通过JS动态加载 -->
+                    </div>
+                    <div class="pagination-area" id="hotMoviesPagination">
+                        <!-- 分页控件将在这里动态生成 -->
+                    </div>
+                </section>
+
+                <!-- 热门电视剧 -->
+                <section class="hot-tv-section">
+                    <div class="section-header">
+                        <h2>最近热门电视剧</h2>
+                        <div class="filter-tabs">
+                            <button class="tab-btn active" data-category="tv-all">综合</button>
+                            <button class="tab-btn" data-category="tv-cn">国产剧</button>
+                            <button class="tab-btn" data-category="tv-variety">综艺</button>
+                            <button class="tab-btn" data-category="tv-us">欧美剧</button>
+                            <button class="tab-btn" data-category="tv-jp">日剧</button>
+                            <button class="tab-btn" data-category="tv-kr">韩剧</button>
+                            <button class="tab-btn" data-category="tv-animation">动画</button>
+                            <button class="tab-btn" data-category="tv-documentary">纪录片</button>
+                        </div>
+                        <a href="/tv" class="more-link">更多>></a>
+                    </div>
+                    <div class="movies-grid" id="hotTVGrid">
+                        <!-- 热门电视剧将通过JS动态加载 -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <aside class="sidebar">
+                <!-- 一周口碑榜 -->
+                <section class="weekly-chart-section">
+                    <div class="section-header">
+                        <h3>一周口碑榜</h3>
+                        <a href="https://movie.douban.com/chart" class="more-link" target="_blank">更多榜单>></a>
+                    </div>
+                    <div class="weekly-chart" id="weeklyChart">
+                        <!-- 口碑榜将通过JS动态加载 -->
+                    </div>
+                </section>
+
+                <!-- 热门片单 -->
+                <section class="hot-lists-section">
+                    <div class="section-header">
+                        <h3>热门片单</h3>
+                    </div>
+                    <div class="hot-lists" id="hotLists">
+                        <!-- 热门片单将通过JS动态加载 -->
+                    </div>
+                </section>
+
+                <!-- 最受欢迎的影评 -->
+                <section class="hot-reviews-section">
+                    <div class="section-header">
+                        <h3>最受欢迎的影评</h3>
+                        <a href="/review/best/" class="more-link">更多影评>></a>
+                    </div>
+                    <div class="hot-reviews" id="hotReviews">
+                        <!-- 热门影评将通过JS动态加载 -->
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于豆瓣</h4>
+                <ul>
+                    <li><a href="/about">关于豆瓣</a></li>
+                    <li><a href="/jobs">在豆瓣工作</a></li>
+                    <li><a href="/about?topic=contactus">联系我们</a></li>
+                    <li><a href="/about/legal">法律声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>帮助</h4>
+                <ul>
+                    <li><a href="/help">帮助中心</a></li>
+                    <li><a href="/doubanapp">豆瓣移动应用</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>合作</h4>
+                <ul>
+                    <li>电影合作邮箱：movie@douban.com</li>
+                    <li>电视剧合作邮箱：tv@douban.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <ul class="social-links">
+                    <li><a href="https://weibo.com/doubanfilm" target="_blank">微博</a></li>
+                    <li><a href="#" class="wechat">微信</a></li>
+                    <li><a href="https://weibo.com/doubanzui" target="_blank">瓣嘴</a></li>
+                    <li><a href="https://www.douban.com/people/nobodyfilm/" target="_blank">光影club</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2005－2024 douban.com, all rights reserved 北京豆网科技有限公司</p>
+        </div>
+    </footer>
+
+    <!-- 脚本文件 -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

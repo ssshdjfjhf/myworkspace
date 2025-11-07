@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在热映电影分页测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .movie-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; }
+        .movie-card {
+            flex: 0 0 150px;
+            text-align: center;
+        }
+        .poster {
+            width: 150px;
+            height: 210px;
+            background: #eee;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+        .title { font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+        .rating { font-size: 12px; color: #ff6600; }
+        .pagination-area { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+        .now-playing-pagination { display: flex; justify-content: center; align-items: center; gap: 15px; }
+        .page-info { font-size: 14px; color: #666; }
+        .page-buttons { display: flex; gap: 8px; }
+        .page-btn { padding: 6px 12px; border: 1px solid #ddd; background: white; border-radius: 4px; cursor: pointer; }
+        .page-btn.active { background: #42bd56; color: white; border-color: #42bd56; }
+        .page-btn.disabled { background: #f5f5f5; color: #ccc; cursor: not-allowed; }
+        .status { margin-top: 20px; padding: 10px; border-radius: 6px; font-size: 14px; }
+        .status.success { background: #e8f5e8; color: #2d5a2d; }
+        .status.error { background: #ffeaea; color: #d42c2c; }
+        .status.info { background: #e3f2fd; color: #1976d2; }
+    </style>
+</head>
+<body>
+    <h1>🎬 正在热映电影分页功能测试</h1>
+    <div id="status-display"></div>
+
+    <div class="test-container">
+        <div class="movie-scroll" id="movies-container">
+            <div class="status info">正在加载电影数据...</div>
+        </div>
+        <div class="pagination-area" id="pagination-container"></div>
+    </div>
+
+    <script>
+        let allMovies = [];
+        let currentPage = 1;
+        const perPage = 5;
+
+        async function loadMovies() {
+            try {
+                const response = await fetch('data/movies.json');
+                if (!response.ok) throw new Error('无法加载电影数据');
+
+                const data = await response.json();
+                allMovies = data.nowPlaying || [];
+
+                updateStatus(`✅ 成功加载 ${allMovies.length} 部电影`, 'success');
+                renderPage(currentPage);
+
+            } catch (error) {
+                updateStatus(`❌ 加载失败: ${error.message}`, 'error');
+            }
+        }
+
+        function renderPage(page) {
+            currentPage = page;
+            const totalPages = Math.ceil(allMovies.length / perPage);
+
+            const startIndex = (page - 1) * perPage;
+            const endIndex = startIndex + perPage;
+            const moviesToShow = allMovies.slice(startIndex, endIndex);
+
+            displayMovies(moviesToShow);
+            displayPagination(totalPages);
+        }
+
+        function displayMovies(movies) {
+            const container = document.getElementById('movies-container');
+            container.innerHTML = '';
+
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.innerHTML = `
+                    <div class="poster">${movie.title}</div>
+                    <div class="title">${movie.title}</div>
+                    <div class="rating">${movie.rating > 0 ? movie.rating.toFixed(1) : '暂无评分'}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function displayPagination(totalPages) {
+            const container = document.getElementById('pagination-container');
+            container.innerHTML = '';
+
+            if (totalPages <= 1) return;
+
+            const pagination = document.createElement('div');
+            pagination.className = 'now-playing-pagination';
+
+            let html = '<div class="page-info">';
+            html += `第 ${currentPage} 页 / 共 ${totalPages} 页`;
+            html += '</div>';
+            html += '<div class="page-buttons">';
+
+            // 上一页
+            html += `<button class="page-btn prev-btn ${currentPage === 1 ? 'disabled' : ''}"
+                             onclick="changePage(${currentPage - 1})"
+                             ${currentPage === 1 ? 'disabled' : ''}>上一页</button>`;
+
+            // 页码
+            for (let i = 1; i <= totalPages; i++) {
+                html += `<button class="page-btn ${i === currentPage ? 'active' : ''}"
+                                 onclick="changePage(${i})">${i}</button>`;
+            }
+
+            // 下一页
+            html += `<button class="page-btn next-btn ${currentPage === totalPages ? 'disabled' : ''}"
+                             onclick="changePage(${currentPage + 1})"
+                             ${currentPage === totalPages ? 'disabled' : ''}>下一页</button>`;
+
+            html += '</div>';
+            pagination.innerHTML = html;
+            container.appendChild(pagination);
+        }
+
+        function changePage(page) {
+            const totalPages = Math.ceil(allMovies.length / perPage);
+            if (page < 1 || page > totalPages) return;
+
+            renderPage(page);
+            updateStatus(`🔄 已切换到第 ${page} 页`, 'info');
+        }
+
+        function updateStatus(message, type) {
+            const statusDiv = document.getElementById('status-display');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadMovies);
+    </script>
+</body>
+</html>

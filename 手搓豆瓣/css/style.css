@@ -1,0 +1,864 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #3377aa;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* 头部导航 */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b51d;
+    text-decoration: none;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav .nav-list a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.main-nav .nav-list a:hover {
+    color: #00b51d;
+    border-bottom-color: #00b51d;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 15px;
+    min-width: 300px;
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.search-btn {
+    background: #00b51d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #009416;
+}
+
+.login-link {
+    color: #3377aa;
+    font-size: 14px;
+}
+
+/* 主要内容区域 */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+}
+
+/* 区块头部样式 */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section-header h2, .section-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.more-link {
+    color: #3377aa;
+    font-size: 13px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 15px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: #00b51d;
+    color: white;
+}
+
+.tab-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.tab-btn.active:hover {
+    background: #009416;
+}
+
+/* 正在热映区域 */
+.now-playing-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.now-playing-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.now-playing-section .section-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.now-playing-section .section-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.movie-scroll-container {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+.movie-scroll {
+    display: flex;
+    gap: 20px;
+    min-width: max-content;
+    padding: 5px 0;
+}
+
+/* 电影卡片样式 */
+.movie-card-scroll {
+    flex: 0 0 150px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.movie-card-scroll:hover {
+    transform: translateY(-4px) scale(1.02);
+    z-index: 10;
+}
+
+.movie-card-scroll .poster {
+    width: 150px;
+    height: 210px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.movie-card-scroll .poster:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card-scroll .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.movie-card-scroll .poster img.loaded {
+    opacity: 1;
+}
+
+.movie-card-scroll .title {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.movie-card-scroll:hover .title {
+    color: #42bd56;
+}
+
+.movie-card-scroll .rating {
+    font-size: 12px;
+    color: #ff6600;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.movie-card-scroll .rating.no-rating {
+    color: #999;
+    font-weight: normal;
+}
+
+.movie-card-scroll .buy-ticket {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.movie-card-scroll .buy-ticket:hover {
+    background: #e55a00;
+}
+
+/* 分页区域样式 */
+.pagination-area {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* 正在热映分页特殊样式 */
+.now-playing-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.now-playing-pagination .page-info {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.now-playing-pagination .page-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.now-playing-pagination .page-btn {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.now-playing-pagination .page-btn:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.now-playing-pagination .page-btn.active {
+    background: #42bd56;
+    color: white;
+    border-color: #42bd56;
+    font-weight: 600;
+}
+
+.now-playing-pagination .page-btn.disabled {
+    background: #f5f5f5;
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .now-playing-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .now-playing-section .section-header {
+        margin-bottom: 15px;
+    }
+
+    .now-playing-section .section-title {
+        font-size: 20px;
+    }
+
+    .movie-scroll-container {
+        margin-bottom: 10px;
+    }
+
+    .movie-card-scroll {
+        flex: 0 0 120px;
+    }
+
+    .movie-card-scroll .poster {
+        width: 120px;
+        height: 168px;
+    }
+
+    .movie-card-scroll .title {
+        font-size: 12px;
+    }
+
+    .movie-card-scroll .rating {
+        font-size: 11px;
+    }
+
+    .movie-card-scroll .buy-ticket {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .now-playing-pagination {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .now-playing-pagination .page-info {
+        font-size: 13px;
+    }
+
+    .now-playing-pagination .page-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .now-playing-section {
+        padding: 15px;
+    }
+
+    .now-playing-section .section-title {
+        font-size: 18px;
+    }
+
+    .movie-card-scroll {
+        flex: 0 0 100px;
+    }
+
+    .movie-card-scroll .poster {
+        width: 100px;
+        height: 140px;
+    }
+
+    .movie-card-scroll .title {
+        font-size: 11px;
+    }
+
+    .now-playing-pagination {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .now-playing-pagination .page-info {
+        font-size: 12px;
+    }
+
+    .now-playing-pagination .page-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 24px;
+        height: 24px;
+    }
+}
+
+/* 热门电影网格 */
+.hot-movies-section, .hot-tv-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hot-movies-section .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 固定为5列 */
+    gap: 25px; /* 调整间距 */
+}
+
+.hot-tv-section .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    gap: 20px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-2px);
+}
+
+.movie-card .poster {
+    width: 100%;
+    height: 190px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.movie-card .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .poster img {
+    transform: scale(1.05);
+}
+
+.movie-card .title {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-card .rating {
+    font-size: 12px;
+    color: #ff6600;
+    font-weight: 600;
+}
+
+.movie-card .no-rating {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 一周口碑榜 */
+.weekly-chart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.weekly-chart-item:last-child {
+    border-bottom: none;
+}
+
+.chart-rank {
+    width: 25px;
+    height: 25px;
+    background: #00b51d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+.chart-rank.top3 {
+    background: #ff6600;
+}
+
+.chart-info {
+    flex: 1;
+}
+
+.chart-title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.chart-rating {
+    font-size: 12px;
+    color: #ff6600;
+}
+
+/* 热门片单 */
+.hot-list-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hot-list-item:last-child {
+    border-bottom: none;
+}
+
+.hot-list-title {
+    font-size: 14px;
+    color: #3377aa;
+    margin-bottom: 5px;
+}
+
+.hot-list-meta {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 热门影评 */
+.hot-review-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hot-review-item:last-child {
+    border-bottom: none;
+}
+
+.review-movie-title {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.review-title {
+    font-size: 14px;
+    color: #3377aa;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.review-author {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 底部 */
+.footer {
+    background: #f8f8f8;
+    border-top: 1px solid #e8e8e8;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #666;
+    font-size: 13px;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6600;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #e8e8e8;
+    color: #999;
+    font-size: 12px;
+}
+
+/* 滚动条样式 */
+.movie-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.movie-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.movie-scroll-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.movie-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 图片样式和错误处理 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* 图片错误状态 */
+img.error {
+    opacity: 0.7;
+    filter: grayscale(30%);
+}
+
+/* 占位图样式 */
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* 加载中的占位效果 */
+.poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.poster:hover::before {
+    left: 100%;
+}
+
+/* 图片加载动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.poster img {
+    animation: fadeIn 0.3s ease;
+}
+
+/* 错误提示样式 */
+.error-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.poster:hover .error-overlay {
+    opacity: 1;
+}
+
+/* 电影卡片悬浮效果增强 */
+.movie-card, .movie-card-scroll {
+    position: relative;
+    overflow: visible;
+}
+
+/* 确保悬浮信息框可以正确显示 */
+.hot-movies-section .movies-grid,
+.hot-tv-section .movies-grid,
+.now-playing-section .movies-scroll {
+    overflow: visible;
+}
+
+/* 悬浮信息框动画 */
+.movie-tooltip {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.movie-card:hover .movie-tooltip,
+.movie-card-scroll:hover .movie-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 标题悬浮效果 */
+.movie-card .title:hover,
+.movie-card-scroll .title:hover {
+    color: #42bd56;
+    transition: color 0.2s ease;
+}
+
+/* 图片悬浮效果 */
+.movie-card .poster img:hover,
+.movie-card-scroll .poster img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* 评分悬浮效果 */
+.movie-card .rating:hover,
+.movie-card-scroll .rating:hover {
+    background: rgba(66, 189, 86, 0.1);
+    transition: background 0.2s ease;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影详情 - 个人电影网</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- 头部导航 -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <a href="/" style="display: flex; align-items: center; gap: 10px;">
+          <span>🎬</span>
+          <span>个人电影网</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="/">首页</a></li>
+        <li><a href="/#now-playing">正在热映</a></li>
+        <li><a href="/#coming-soon">即将上映</a></li>
+        <li><a href="/#top-rated">高分电影</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="搜索电影...">
+        <button class="search-btn" onclick="searchMovies()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="detail-container">
+    <div id="movieDetail">
+      <div class="loading"></div>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#" class="footer-link">关于我们</a>
+        <a href="#" class="footer-link">联系方式</a>
+        <a href="#" class="footer-link">使用条款</a>
+        <a href="#" class="footer-link">隐私政策</a>
+      </div>
+      <p class="footer-copyright">© 2025 个人电影网. 本项目仅供学习交流使用.</p>
+    </div>
+  </footer>
+
+  <script src="/js/detail.js"></script>
+</body>
+</html>

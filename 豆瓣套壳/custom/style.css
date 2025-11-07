@@ -1,0 +1,44 @@
+/* 自定义样式 */
+
+.custom-download-section {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-download-btn {
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.custom-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+.custom-download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 自定义标记样式 */
+.custom-marker {
+  display: inline-block;
+  background: #ff6a00;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+}

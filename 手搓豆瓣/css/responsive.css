@@ -1,0 +1,356 @@
+/* 响应式设计 */
+
+/* 大屏幕 (1200px以上) */
+@media screen and (min-width: 1200px) {
+    .nav-container,
+    .main-content,
+    .footer-content {
+        max-width: 1200px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* 中等屏幕 (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+    .nav-container,
+    .main-content,
+    .footer-content {
+        max-width: 992px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .search-box {
+        min-width: 250px;
+    }
+
+    .nav-left {
+        gap: 20px;
+    }
+
+    .main-nav .nav-list {
+        gap: 20px;
+    }
+}
+
+/* 小屏幕 (768px - 991px) */
+@media screen and (max-width: 991px) {
+    .nav-container,
+    .main-content,
+    .footer-content {
+        max-width: 768px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .search-box {
+        min-width: 200px;
+    }
+
+    .nav-left {
+        gap: 15px;
+    }
+
+    .main-nav .nav-list {
+        gap: 15px;
+    }
+
+    .main-nav .nav-list a {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+}
+
+/* 平板 (576px - 767px) */
+@media screen and (max-width: 767px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        min-width: auto;
+        flex: 1;
+        margin-right: 15px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .movie-card .poster {
+        height: 160px;
+    }
+
+    .movie-card-scroll {
+        flex: 0 0 120px;
+    }
+
+    .movie-card-scroll .poster {
+        width: 120px;
+        height: 168px;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-tabs {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .now-playing-section,
+    .hot-movies-section,
+    .hot-tv-section {
+        padding: 20px;
+    }
+}
+
+/* 手机 (575px以下) */
+@media screen and (max-width: 575px) {
+    .nav-container {
+        padding: 10px 15px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .main-nav .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .movie-card .poster {
+        height: 140px;
+    }
+
+    .movie-card-scroll {
+        flex: 0 0 100px;
+    }
+
+    .movie-card-scroll .poster {
+        width: 100px;
+        height: 140px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .now-playing-section,
+    .hot-movies-section,
+    .hot-tv-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .section-header h2,
+    .section-header h3 {
+        font-size: 16px;
+    }
+
+    .filter-tabs {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .sidebar section {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+    }
+}
+
+/* 超小屏幕 (375px以下) */
+@media screen and (max-width: 375px) {
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-card .poster {
+        height: 300px;
+    }
+
+    .movie-scroll {
+        gap: 10px;
+    }
+
+    .movie-card-scroll {
+        flex: 0 0 80px;
+    }
+
+    .movie-card-scroll .poster {
+        width: 80px;
+        height: 112px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .filter-tabs {
+        order: 0;
+        margin-top: 0;
+    }
+}
+
+/* 横向滚动优化 */
+@media screen and (max-width: 767px) {
+    .movie-scroll-container {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .movie-scroll {
+        padding-right: 15px;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .movie-card:hover,
+    .movie-card-scroll:hover {
+        transform: none;
+    }
+
+    .movie-card:hover .poster img {
+        transform: none;
+    }
+
+    .tab-btn:hover {
+        background: none;
+        color: #666;
+    }
+
+    .tab-btn.active:hover {
+        background: #00b51d;
+        color: white;
+    }
+}
+
+/* 高DPI屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .movie-card .poster,
+    .movie-card-scroll .poster {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .now-playing-section,
+    .hot-movies-section,
+    .hot-tv-section,
+    .sidebar section {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+}
+
+/* 暗色模式支持（可选） */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    .header {
+        background: #2d2d2d;
+        border-bottom-color: #404040;
+    }
+
+    .search-box {
+        background: #404040;
+    }
+
+    .search-box input {
+        color: #e0e0e0;
+    }
+
+    .now-playing-section,
+    .hot-movies-section,
+    .hot-tv-section,
+    .sidebar section {
+        background: #2d2d2d;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .section-header h2,
+    .section-header h3 {
+        color: #e0e0e0;
+    }
+
+    .footer {
+        background: #2d2d2d;
+        border-top-color: #404040;
+    }
+}

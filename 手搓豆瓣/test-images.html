@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片加载测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-container { display: flex; gap: 20px; flex-wrap: wrap; }
+        .test-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .test-image {
+            width: 150px;
+            height: 210px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+        .status {
+            margin-top: 10px;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .status.success { background: #e8f5e8; color: #2d5a2d; }
+        .status.error { background: #ffeaea; color: #d42c2c; }
+        .status.loading { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <h1>豆瓣电影图片加载测试</h1>
+    <p>测试不同来源的图片加载情况：</p>
+
+    <div class="test-container">
+        <div class="test-item">
+            <h3>测试1：豆瓣正常图片</h3>
+            <img class="test-image"
+                 src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925558247.jpg"
+                 alt="震耳欲聋"
+                 onload="updateStatus(this, 'success')"
+                 onerror="updateStatus(this, 'error')">
+            <div class="status loading">加载中...</div>
+        </div>
+
+        <div class="test-item">
+            <h3>测试2：豆瓣可能失效图片</h3>
+            <img class="test-image"
+                 src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/invalid_image.jpg"
+                 alt="无效图片"
+                 onload="updateStatus(this, 'success')"
+                 onerror="updateStatus(this, 'error')">
+            <div class="status loading">加载中...</div>
+        </div>
+
+        <div class="test-item">
+            <h3>测试3：占位图生成</h3>
+            <img class="test-image"
+                 src="invalid_url"
+                 alt="测试占位图"
+                 onload="updateStatus(this, 'success')"
+                 onerror="handlePlaceholder(this)">
+            <div class="status loading">加载中...</div>
+        </div>
+
+        <div class="test-item">
+            <h3>测试4：本地备用图片</h3>
+            <img class="test-image"
+                 src="https://via.placeholder.com/150x210/4CAF50/white?text=电影海报"
+                 alt="本地占位图"
+                 onload="updateStatus(this, 'success')"
+                 onerror="updateStatus(this, 'error')">
+            <div class="status loading">加载中...</div>
+        </div>
+    </div>
+
+    <h2>解决方案建议：</h2>
+    <ul>
+        <li><strong>方案1：使用备用图片服务</strong> - 如 placeholder.com、via.placeholder.com</li>
+        <li><strong>方案2：生成本地SVG占位图</strong> - 不依赖外部服务</li>
+        <li><strong>方案3：下载图片到本地</strong> - 避免跨域和防盗链问题</li>
+        <li><strong>方案4：使用代理服务</strong> - 通过后端代理获取图片</li>
+    </ul>
+
+    <script>
+        function updateStatus(img, status) {
+            const statusDiv = img.nextElementSibling;
+            statusDiv.className = `status ${status}`;
+
+            if (status === 'success') {
+                statusDiv.textContent = '✅ 加载成功';
+            } else if (status === 'error') {
+                statusDiv.textContent = '❌ 加载失败';
+            }
+        }
+
+        function handlePlaceholder(img) {
+            // 生成SVG占位图
+            const width = 150;
+            const height = 210;
+            const title = img.alt || '电影海报';
+
+            const svg = `data:image/svg+xml;base64,${btoa(`
+                <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f0f0f0;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grad)" />
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em"
+                          font-family="Arial, sans-serif" font-size="14" fill="#999">
+                        ${title}
+                    </text>
+                </svg>
+            `)}`;
+
+            img.src = svg;
+            img.style.opacity = '0.7';
+            img.style.filter = 'grayscale(30%)';
+
+            updateStatus(img, 'error');
+            statusDiv.textContent = '⚠️ 已替换为占位图';
+        }
+
+        // 页面加载完成后检查所有图片
+        window.addEventListener('load', () => {
+            console.log('页面加载完成，检查图片状态...');
+        });
+    </script>
+</body>
+</html>

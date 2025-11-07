@@ -1,0 +1,1944 @@
+{
+  "nowPlaying": [
+    {
+      "id": 1,
+      "title": "震耳欲聋",
+      "originalTitle": "The Loud One",
+      "rating": 7.4,
+      "ratingsCount": 15420,
+      "year": 2024,
+      "duration": "118分钟",
+      "genres": [
+        "剧情",
+        "犯罪"
+      ],
+      "directors": [
+        "张艺谋"
+      ],
+      "casts": [
+        "雷佳音",
+        "杨幂",
+        "于和伟",
+        "佟丽娅"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925558247.jpg",
+      "summary": "一个关于正义与邪恶较量的故事，在喧嚣的城市中展开。",
+      "releaseDate": "2024-10-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37107063",
+      "localPoster": "images/movies/1_p2925558247.jpg"
+    },
+    {
+      "id": 2,
+      "title": "一战再战",
+      "originalTitle": "Fight Again",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "105分钟",
+      "genres": [
+        "动作",
+        "战争"
+      ],
+      "directors": [
+        "林超贤"
+      ],
+      "casts": [
+        "彭于晏",
+        "王彦霖",
+        "辛芷蕾",
+        "王大陆"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925146362.jpg",
+      "summary": "特种兵在战场上浴血奋战的故事。",
+      "releaseDate": "2024-09-30",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36176155",
+      "localPoster": "images/movies/2_p2925146362.jpg"
+    },
+    {
+      "id": 3,
+      "title": "创：战神",
+      "originalTitle": "Tron: Ares",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "130分钟",
+      "genres": [
+        "科幻",
+        "动作",
+        "冒险"
+      ],
+      "directors": [
+        "乔阿吉姆·罗恩尼"
+      ],
+      "casts": [
+        "杰瑞德·莱托",
+        "伊万·彼得斯",
+        "格蕾塔·李",
+        "朱迪·特纳-史密斯"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925021518.jpg",
+      "summary": "进入数字世界的全新冒险。",
+      "releaseDate": "2024-10-11",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=30246476",
+      "localPoster": "images/movies/3_p2925021518.jpg"
+    },
+    {
+      "id": 4,
+      "title": "寻她",
+      "originalTitle": "Find Her",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "95分钟",
+      "genres": [
+        "剧情",
+        "悬疑"
+      ],
+      "directors": [
+        "吕乐"
+      ],
+      "casts": [
+        "姚晨",
+        "马伊琍",
+        "袁文康",
+        "吴昊宸"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2926041221.jpg",
+      "summary": "一个关于寻找真相的故事。",
+      "releaseDate": "2024-09-15",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=35500489",
+      "localPoster": "images/movies/4_p2926041221.jpg"
+    },
+    {
+      "id": 5,
+      "title": "毕正明的证明",
+      "originalTitle": "Bi Zhengming's Proof",
+      "rating": 7.4,
+      "ratingsCount": 8930,
+      "year": 2024,
+      "duration": "112分钟",
+      "genres": [
+        "剧情",
+        "传记"
+      ],
+      "directors": [
+        "陈可辛"
+      ],
+      "casts": [
+        "黄渤",
+        "宋佳",
+        "王千源",
+        "张颂文"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925338366.jpg",
+      "summary": "数学家毕正明的传奇人生。",
+      "releaseDate": "2024-09-20",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36402017",
+      "localPoster": "images/movies/5_p2925338366.jpg"
+    },
+    {
+      "id": 6,
+      "title": "731",
+      "originalTitle": "731",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "128分钟",
+      "genres": [
+        "历史",
+        "战争"
+      ],
+      "directors": [
+        "赵林山"
+      ],
+      "casts": [
+        "姜武",
+        "王志文",
+        "李乃文",
+        "林家川"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2923955351.jpg",
+      "summary": "揭露历史真相的战争片。",
+      "releaseDate": "2024-10-15",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=27605659",
+      "localPoster": "images/movies/6_p2923955351.jpg"
+    },
+    {
+      "id": 7,
+      "title": "风林火山",
+      "originalTitle": "Sons of the Neon Night",
+      "rating": 6.4,
+      "ratingsCount": 12450,
+      "year": 2024,
+      "duration": "135分钟",
+      "genres": [
+        "剧情",
+        "犯罪",
+        "悬疑"
+      ],
+      "directors": [
+        "麦浚龙"
+      ],
+      "casts": [
+        "金城武",
+        "刘青云",
+        "古天乐",
+        "梁家辉"
+      ],
+      "countries": [
+        "中国香港"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925142654.jpg",
+      "summary": "香港黑帮史诗巨制。",
+      "releaseDate": "2024-09-28",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=26351864",
+      "localPoster": "images/movies/7_p2925142654.jpg"
+    },
+    {
+      "id": 8,
+      "title": "志愿军：浴血和平",
+      "originalTitle": "The Volunteers: To War",
+      "rating": 7.3,
+      "ratingsCount": 18760,
+      "year": 2024,
+      "duration": "141分钟",
+      "genres": [
+        "剧情",
+        "历史",
+        "战争"
+      ],
+      "directors": [
+        "陈凯歌"
+      ],
+      "casts": [
+        "朱一龙",
+        "张子枫",
+        "陈飞宇",
+        "张宥浩"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925438718.jpg",
+      "summary": "志愿军战士的英勇故事。",
+      "releaseDate": "2024-09-30",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36296619",
+      "localPoster": "images/movies/8_p2925438718.jpg"
+    },
+    {
+      "id": 35382381,
+      "title": "刺杀小说家2",
+      "originalTitle": "刺杀小说家2",
+      "rating": 6.0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "134分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "路阳"
+      ],
+      "casts": [
+        "邓超",
+        "董子健",
+        "雷佳音"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925135677.webp",
+      "summary": "刺杀小说家2是一部2025年上映的电影，由路阳执导，邓超, 董子健等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=35382381",
+      "localPoster": "images/movies/35382381_p2925135677.jpg"
+    },
+    {
+      "id": 36830173,
+      "title": "三国的星空第一部",
+      "originalTitle": "三国的星空第一部",
+      "rating": 7.1,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "122分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "于孟 袁原"
+      ],
+      "casts": [
+        "檀健次",
+        "路金波",
+        "旺旺"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925681858.webp",
+      "summary": "三国的星空第一部是一部2025年上映的电影，由于孟 袁原执导，檀健次, 路金波等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36830173",
+      "localPoster": "images/movies/36830173_p2925681858.jpg"
+    },
+    {
+      "id": 35293593,
+      "title": "火种",
+      "originalTitle": "火种",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "96分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "陈剑飞"
+      ],
+      "casts": [
+        "富大龙",
+        "姜武",
+        "周开开"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2628797651.webp",
+      "summary": "火种是一部2025年上映的电影，由陈剑飞执导，富大龙, 姜武等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=35293593",
+      "localPoster": "images/movies/35293593_p2628797651.jpg"
+    },
+    {
+      "id": 36207392,
+      "title": "浪浪人生",
+      "originalTitle": "浪浪人生",
+      "rating": 6.2,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "123分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "马林"
+      ],
+      "casts": [
+        "黄渤",
+        "范丞丞",
+        "殷桃"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925348960.webp",
+      "summary": "浪浪人生是一部2025年上映的电影，由马林执导，黄渤, 范丞丞等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36207392",
+      "localPoster": "images/movies/36207392_p2925348960.jpg"
+    },
+    {
+      "id": 37067150,
+      "title": "关于约会的一切",
+      "originalTitle": "关于约会的一切",
+      "rating": 8.1,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "97分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "保罗·杰诺维塞"
+      ],
+      "casts": [
+        "爱德华多·莱奥",
+        "皮拉尔·福格莉亚蒂",
+        "埃马努艾拉·法内利"
+      ],
+      "countries": [
+        "意大利"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924636647.webp",
+      "summary": "关于约会的一切是一部2025年上映的电影，由保罗·杰诺维塞执导，爱德华多·莱奥, 皮拉尔·福格莉亚蒂等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37067150",
+      "localPoster": "images/movies/37067150_p2924636647.jpg"
+    },
+    {
+      "id": 37282414,
+      "title": "猪猪侠·一只老猪的逆袭",
+      "originalTitle": "猪猪侠·一只老猪的逆袭",
+      "rating": 4.8,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "89分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "陆锦明 钟彧 李腾栋"
+      ],
+      "casts": [
+        "陆双",
+        "山新",
+        "唐嶷"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2925146421.webp",
+      "summary": "猪猪侠·一只老猪的逆袭是一部2025年上映的电影，由陆锦明 钟彧 李腾栋执导，陆双, 山新等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37282414",
+      "localPoster": "images/movies/37282414_p2925146421.jpg"
+    },
+    {
+      "id": 37317062,
+      "title": "疯狂电脑城",
+      "originalTitle": "疯狂电脑城",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "未知",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "谭焕臣 埃斯特班·马丁"
+      ],
+      "casts": [
+        "张睿",
+        "张天爱"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925137935.webp",
+      "summary": "疯狂电脑城是一部2025年上映的电影，由谭焕臣 埃斯特班·马丁执导，张睿, 张天爱等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37317062",
+      "localPoster": "images/movies/37317062_p2925137935.jpg"
+    },
+    {
+      "id": 36208089,
+      "title": "7天",
+      "originalTitle": "7天",
+      "rating": 5.9,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "121分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "邱玉洁"
+      ],
+      "casts": [
+        "蒋奇明",
+        "张艺凡",
+        "杨皓宇"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2923769862.webp",
+      "summary": "7天是一部2025年上映的电影，由邱玉洁执导，蒋奇明, 张艺凡等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36208089",
+      "localPoster": "images/movies/36208089_p2923769862.jpg"
+    },
+    {
+      "id": 37234302,
+      "title": "汉斯·季默与朋友们：沙漠之钻",
+      "originalTitle": "汉斯·季默与朋友们：沙漠之钻",
+      "rating": 8.8,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "158分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "保罗·达格代尔"
+      ],
+      "casts": [
+        "汉斯·季默",
+        "尼克·格伦尼-史密斯",
+        "丽莎·杰勒德"
+      ],
+      "countries": [
+        "美国 英国"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924929880.webp",
+      "summary": "汉斯·季默与朋友们：沙漠之钻是一部2025年上映的电影，由保罗·达格代尔执导，汉斯·季默, 尼克·格伦尼-史密斯等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37234302",
+      "localPoster": "images/movies/37234302_p2924929880.jpg"
+    },
+    {
+      "id": 37007685,
+      "title": "窗外是蓝星",
+      "originalTitle": "窗外是蓝星",
+      "rating": 8.6,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "90分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "朱翌冉"
+      ],
+      "casts": [
+        "翟志刚",
+        "王亚平",
+        "叶光富"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924758250.webp",
+      "summary": "窗外是蓝星是一部2025年上映的电影，由朱翌冉执导，翟志刚, 王亚平等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37007685",
+      "localPoster": "images/movies/37007685_p2924758250.jpg"
+    },
+    {
+      "id": 36600459,
+      "title": "捕风追影",
+      "originalTitle": "捕风追影",
+      "rating": 8.2,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "141分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "杨子"
+      ],
+      "casts": [
+        "成龙",
+        "张子枫",
+        "梁家辉"
+      ],
+      "countries": [
+        "中国大陆 中国香港"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924069675.webp",
+      "summary": "捕风追影是一部2025年上映的电影，由杨子执导，成龙, 张子枫等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36600459",
+      "localPoster": "images/movies/36600459_p2924069675.jpg"
+    },
+    {
+      "id": 37434432,
+      "title": "巫咒",
+      "originalTitle": "巫咒",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "88分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "王文博"
+      ],
+      "casts": [
+        "王楠楠",
+        "田诗雨",
+        "张瀚文"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925565205.webp",
+      "summary": "巫咒是一部2025年上映的电影，由王文博执导，王楠楠, 田诗雨等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37434432",
+      "localPoster": "images/movies/37434432_p2925565205.jpg"
+    },
+    {
+      "id": 36809864,
+      "title": "南京照相馆",
+      "originalTitle": "南京照相馆",
+      "rating": 8.8,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "137分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "申奥"
+      ],
+      "casts": [
+        "刘昊然",
+        "王传君",
+        "高叶"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924276740.webp",
+      "summary": "南京照相馆是一部2025年上映的电影，由申奥执导，刘昊然, 王传君等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36809864",
+      "localPoster": "images/movies/36809864_p2924276740.jpg"
+    },
+    {
+      "id": 36782374,
+      "title": "轻于鸿毛",
+      "originalTitle": "轻于鸿毛",
+      "rating": 6.3,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "108分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "周铨"
+      ],
+      "casts": [
+        "宋佳",
+        "佟丽娅",
+        "詹鑫"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924927926.webp",
+      "summary": "轻于鸿毛是一部2025年上映的电影，由周铨执导，宋佳, 佟丽娅等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36782374",
+      "localPoster": "images/movies/36782374_p2924927926.jpg"
+    },
+    {
+      "id": 35689244,
+      "title": "F1：狂飙飞车",
+      "originalTitle": "F1：狂飙飞车",
+      "rating": 8.7,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "156分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "约瑟夫·科辛斯基"
+      ],
+      "casts": [
+        "布拉德·皮特",
+        "戴姆森·伊德瑞斯",
+        "哈维尔·巴登"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2922238175.webp",
+      "summary": "F1：狂飙飞车是一部2025年上映的电影，由约瑟夫·科辛斯基执导，布拉德·皮特, 戴姆森·伊德瑞斯等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=35689244",
+      "localPoster": "images/movies/35689244_p2922238175.jpg"
+    },
+    {
+      "id": 36438475,
+      "title": "浪浪山小妖怪",
+      "originalTitle": "浪浪山小妖怪",
+      "rating": 8.5,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "118分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "於水"
+      ],
+      "casts": [
+        "陈子平",
+        "路扬",
+        "董汶亮"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2923770138.webp",
+      "summary": "浪浪山小妖怪是一部2025年上映的电影，由於水执导，陈子平, 路扬等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36438475",
+      "localPoster": "images/movies/36438475_p2923770138.jpg"
+    },
+    {
+      "id": 36467821,
+      "title": "蜗牛回忆录",
+      "originalTitle": "蜗牛回忆录",
+      "rating": 8.4,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "95分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "亚当·艾略特"
+      ],
+      "casts": [
+        "莎拉·斯努克",
+        "柯蒂·斯密特-麦菲",
+        "杰基·韦佛"
+      ],
+      "countries": [
+        "澳大利亚"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924886534.webp",
+      "summary": "蜗牛回忆录是一部2024年上映的电影，由亚当·艾略特执导，莎拉·斯努克, 柯蒂·斯密特-麦菲等主演。",
+      "releaseDate": "2024-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36467821",
+      "localPoster": "images/movies/36467821_p2924886534.jpg"
+    },
+    {
+      "id": 36253688,
+      "title": "爱的暂停键",
+      "originalTitle": "爱的暂停键",
+      "rating": 7.7,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "105分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "莉莉娅·英戈尔夫斯多蒂尔"
+      ],
+      "casts": [
+        "赫尔加·古莲",
+        "奥德盖尔·图内",
+        "凯瑞·豪根·西德尼斯"
+      ],
+      "countries": [
+        "挪威"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924646194.webp",
+      "summary": "爱的暂停键是一部2024年上映的电影，由莉莉娅·英戈尔夫斯多蒂尔执导，赫尔加·古莲, 奥德盖尔·图内等主演。",
+      "releaseDate": "2024-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36253688",
+      "localPoster": "images/movies/36253688_p2924646194.jpg"
+    },
+    {
+      "id": 37047993,
+      "title": "靠近我 看见你",
+      "originalTitle": "靠近我 看见你",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "107分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "江平 范雨林"
+      ],
+      "casts": [
+        "牛犇",
+        "李木子",
+        "袁霆"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924939029.webp",
+      "summary": "靠近我 看见你是一部2025年上映的电影，由江平 范雨林执导，牛犇, 李木子等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37047993",
+      "localPoster": "images/movies/37047993_p2924939029.jpg"
+    },
+    {
+      "id": 30429388,
+      "title": "死神来了：血脉诅咒",
+      "originalTitle": "死神来了：血脉诅咒",
+      "rating": 6.9,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "109分钟(中国大陆)",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "亚当·B·斯坦 扎克·利波夫斯基"
+      ],
+      "casts": [
+        "凯特琳·桑塔·胡安娜",
+        "特欧·布里奥尼斯",
+        "理查德·哈蒙"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924000768.webp",
+      "summary": "死神来了：血脉诅咒是一部2025年上映的电影，由亚当·B·斯坦 扎克·利波夫斯基执导，凯特琳·桑塔·胡安娜, 特欧·布里奥尼斯等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=30429388",
+      "localPoster": "images/movies/30429388_p2924000768.jpg"
+    },
+    {
+      "id": 36139721,
+      "title": "伊甸",
+      "originalTitle": "伊甸",
+      "rating": 6.9,
+      "ratingsCount": 0,
+      "year": 2024,
+      "duration": "129分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "朗·霍华德"
+      ],
+      "casts": [
+        "裘德·洛",
+        "安娜·德·阿玛斯",
+        "凡妮莎·柯比"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924041782.webp",
+      "summary": "伊甸是一部2024年上映的电影，由朗·霍华德执导，裘德·洛, 安娜·德·阿玛斯等主演。",
+      "releaseDate": "2024-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36139721",
+      "localPoster": "images/movies/36139721_p2924041782.jpg"
+    },
+    {
+      "id": 37273237,
+      "title": "极限城市",
+      "originalTitle": "极限城市",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "未知",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "胡淑华"
+      ],
+      "casts": [
+        "不喝开水",
+        "薛小雨",
+        "苏榆舒"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925354359.webp",
+      "summary": "极限城市是一部2025年上映的电影，由胡淑华执导，不喝开水, 薛小雨等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37273237",
+      "localPoster": "images/movies/37273237_p2925354359.jpg"
+    },
+    {
+      "id": 36829507,
+      "title": "坏蛋联盟2",
+      "originalTitle": "坏蛋联盟2",
+      "rating": 7.6,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "104分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "皮埃尔·佩里费尔  J·P·桑斯"
+      ],
+      "casts": [
+        "山姆·洛克威尔",
+        "马克·马龙",
+        "奥卡菲娜"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2923073504.webp",
+      "summary": "坏蛋联盟2是一部2025年上映的电影，由皮埃尔·佩里费尔  J·P·桑斯执导，山姆·洛克威尔, 马克·马龙等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36829507",
+      "localPoster": "images/movies/36829507_p2923073504.jpg"
+    },
+    {
+      "id": 37502490,
+      "title": "地球脉动：万物有道",
+      "originalTitle": "地球脉动：万物有道",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "97分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "阿比盖尔·利斯"
+      ],
+      "casts": [
+        "拉塞尔·博尔特"
+      ],
+      "countries": [
+        "英国"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924932683.webp",
+      "summary": "地球脉动：万物有道是一部2025年上映的电影，由阿比盖尔·利斯执导，拉塞尔·博尔特等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37502490",
+      "localPoster": "images/movies/37502490_p2924932683.jpg"
+    },
+    {
+      "id": 10440138,
+      "title": "侏罗纪世界",
+      "originalTitle": "侏罗纪世界",
+      "rating": 7.8,
+      "ratingsCount": 0,
+      "year": 2015,
+      "duration": "124分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "科林·特莱沃若"
+      ],
+      "casts": [
+        "克里斯·帕拉特",
+        "布莱丝·达拉斯·霍华德",
+        "文森特·多诺费奥"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2246217861.webp",
+      "summary": "侏罗纪世界是一部2015年上映的电影，由科林·特莱沃若执导，克里斯·帕拉特, 布莱丝·达拉斯·霍华德等主演。",
+      "releaseDate": "2015-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=10440138",
+      "localPoster": "images/movies/10440138_p2246217861.jpg"
+    },
+    {
+      "id": 37434327,
+      "title": "午夜怪谈2",
+      "originalTitle": "午夜怪谈2",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "90分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "朱迅"
+      ],
+      "casts": [
+        "熊婧文",
+        "韩陌",
+        "姚致远"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2925034131.webp",
+      "summary": "午夜怪谈2是一部2025年上映的电影，由朱迅 执导，熊婧文, 韩陌等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37434327",
+      "localPoster": "images/movies/37434327_p2925034131.jpg"
+    },
+    {
+      "id": 26416062,
+      "title": "侏罗纪世界2",
+      "originalTitle": "侏罗纪世界2",
+      "rating": 6.6,
+      "ratingsCount": 0,
+      "year": 2018,
+      "duration": "128分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "J·A·巴亚纳"
+      ],
+      "casts": [
+        "克里斯·帕拉特",
+        "布莱丝·达拉斯·霍华德",
+        "贾斯蒂斯·史密斯"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2522069454.webp",
+      "summary": "侏罗纪世界2是一部2018年上映的电影，由J·A·巴亚纳执导，克里斯·帕拉特, 布莱丝·达拉斯·霍华德等主演。",
+      "releaseDate": "2018-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=26416062",
+      "localPoster": "images/movies/26416062_p2522069454.jpg"
+    },
+    {
+      "id": 26873582,
+      "title": "侏罗纪世界3",
+      "originalTitle": "侏罗纪世界3",
+      "rating": 6.1,
+      "ratingsCount": 0,
+      "year": 2022,
+      "duration": "147分钟(中国大陆)",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "科林·特莱沃若"
+      ],
+      "casts": [
+        "克里斯·帕拉特",
+        "布莱丝·达拉斯·霍华德",
+        "劳拉·邓恩"
+      ],
+      "countries": [
+        "美国 马耳他"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2873135507.webp",
+      "summary": "侏罗纪世界3是一部2022年上映的电影，由科林·特莱沃若执导，克里斯·帕拉特, 布莱丝·达拉斯·霍华德等主演。",
+      "releaseDate": "2022-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=26873582",
+      "localPoster": "images/movies/26873582_p2873135507.jpg"
+    },
+    {
+      "id": 36738997,
+      "title": "坪石先生",
+      "originalTitle": "坪石先生",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "124分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "甘小二"
+      ],
+      "casts": [
+        "谢君豪",
+        "颜秋越",
+        "王宏伟"
+      ],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2923810598.webp",
+      "summary": "坪石先生是一部2025年上映的电影，由甘小二执导，谢君豪, 颜秋越等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36738997",
+      "localPoster": "images/movies/36738997_p2923810598.jpg"
+    },
+    {
+      "id": 37337369,
+      "title": "喜羊羊与灰太狼之异国破晓",
+      "originalTitle": "喜羊羊与灰太狼之异国破晓",
+      "rating": 6.8,
+      "ratingsCount": 0,
+      "year": 2025,
+      "duration": "96分钟",
+      "genres": [
+        "剧情"
+      ],
+      "directors": [
+        "陈辉衍 梁嘉琪"
+      ],
+      "casts": [],
+      "countries": [
+        "中国大陆"
+      ],
+      "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2923045688.webp",
+      "summary": "喜羊羊与灰太狼之异国破晓是一部2025年上映的电影，由陈辉衍 梁嘉琪执导，等主演。",
+      "releaseDate": "2025-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=37337369",
+      "localPoster": "images/movies/37337369_p2923045688.jpg"
+    },
+    {
+      "id": 36827764,
+      "title": "海洋之谜",
+      "originalTitle": "海洋之谜",
+      "rating": 0,
+      "ratingsCount": 0,
+      "year": 2022,
+      "duration": "40分钟",
+      "genres": [
+        "悬疑"
+      ],
+      "directors": [
+        "乔纳森·伯德 霍华德·豪尔"
+      ],
+      "casts": [
+        "Joelle Carter"
+      ],
+      "countries": [
+        "美国"
+      ],
+      "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2906091622.webp",
+      "summary": "海洋之谜是一部2022年上映的电影，由乔纳森·伯德 霍华德·豪尔执导，Joelle Carter等主演。",
+      "releaseDate": "2022-01-01",
+      "status": "hot",
+      "buyTicketUrl": "https://movie.douban.com/ticket/redirect/?movie_id=36827764",
+      "localPoster": "images/movies/36827764_p2906091622.jpg"
+    }
+  ],
+  "hotMovies": {
+    "hot": [
+      {
+        "id": 101,
+        "title": "地球特派员",
+        "originalTitle": "Elio",
+        "rating": 6.8,
+        "ratingsCount": 8930,
+        "year": 2025,
+        "duration": "102分钟",
+        "genres": [
+          "动画",
+          "科幻",
+          "冒险"
+        ],
+        "directors": [
+          "阿德里安·莫利纳",
+          "玛德琳·莎拉芬"
+        ],
+        "casts": [
+          "约纳斯·基布雷亚布",
+          "亚美莉卡·费雷拉",
+          "贾米拉·贾米尔",
+          "布拉德·加内特"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2922390030.jpg",
+        "summary": "一个地球男孩被误认为是地球大使，被带到宇宙议会的奇妙冒险。",
+        "releaseDate": "2025-06-13",
+        "status": "hot",
+        "localPoster": "images/movies/101_p2922390030.jpg"
+      },
+      {
+        "id": 102,
+        "title": "从前的光景",
+        "originalTitle": "Here",
+        "rating": 7.8,
+        "ratingsCount": 12450,
+        "year": 2024,
+        "duration": "104分钟",
+        "genres": [
+          "剧情"
+        ],
+        "directors": [
+          "罗伯特·泽米吉斯"
+        ],
+        "casts": [
+          "汤姆·汉克斯",
+          "罗宾·怀特",
+          "保罗·贝坦尼",
+          "凯利·蕾莉"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2922271700.jpg",
+        "summary": "一个房间见证了几十年的家庭变迁。",
+        "releaseDate": "2024-11-01",
+        "status": "hot",
+        "localPoster": "images/movies/102_p2922271700.jpg"
+      },
+      {
+        "id": 103,
+        "title": "南京照相馆",
+        "originalTitle": "The Photographers",
+        "rating": 8.8,
+        "ratingsCount": 15670,
+        "year": 2024,
+        "duration": "118分钟",
+        "genres": [
+          "剧情",
+          "历史"
+        ],
+        "directors": [
+          "张艺谋"
+        ],
+        "casts": [
+          "张译",
+          "秦海璐",
+          "王千源",
+          "雷佳音"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924276740.jpg",
+        "summary": "一家照相馆见证的南京历史变迁。",
+        "releaseDate": "2024-10-18",
+        "status": "hot",
+        "localPoster": "images/movies/103_p2924276740.jpg"
+      },
+      {
+        "id": 104,
+        "title": "普通事故",
+        "originalTitle": "An Ordinary Accident",
+        "rating": 7.6,
+        "ratingsCount": 9870,
+        "year": 2024,
+        "duration": "95分钟",
+        "genres": [
+          "剧情",
+          "悬疑"
+        ],
+        "directors": [
+          "刁亦男"
+        ],
+        "casts": [
+          "胡歌",
+          "桂纶镁",
+          "廖凡",
+          "万茜"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924199668.jpg",
+        "summary": "一个普通事故引发的连锁反应。",
+        "releaseDate": "2024-09-12",
+        "status": "hot",
+        "localPoster": "images/movies/104_p2924199668.jpg"
+      },
+      {
+        "id": 105,
+        "title": "惊变28年",
+        "originalTitle": "28 Years Later",
+        "rating": 5.6,
+        "ratingsCount": 7230,
+        "year": 2025,
+        "duration": "115分钟",
+        "genres": [
+          "科幻",
+          "恐怖"
+        ],
+        "directors": [
+          "丹尼·博伊尔"
+        ],
+        "casts": [
+          "基里安·墨菲",
+          "亚伦·泰勒-约翰逊",
+          "拉尔夫·费因斯",
+          "杰西卡·布朗·芬德利"
+        ],
+        "countries": [
+          "英国",
+          "美国"
+        ],
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2916224463.jpg",
+        "summary": "28年后的世界，病毒再次爆发。",
+        "releaseDate": "2025-01-17",
+        "status": "hot",
+        "localPoster": "images/movies/105_p2916224463.jpg"
+      },
+      {
+        "id": 106,
+        "title": "雷诺阿",
+        "originalTitle": "Renoir",
+        "rating": 6.6,
+        "ratingsCount": 5640,
+        "year": 2024,
+        "duration": "111分钟",
+        "genres": [
+          "剧情",
+          "传记"
+        ],
+        "directors": [
+          "吉尔·布都"
+        ],
+        "casts": [
+          "米歇尔·布凯",
+          "樊尚·罗蒂埃",
+          "克丽丝塔·特瑞特",
+          "托马斯·多雷"
+        ],
+        "countries": [
+          "法国"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2922031410.jpg",
+        "summary": "印象派大师雷诺阿的晚年生活。",
+        "releaseDate": "2024-10-25",
+        "status": "hot",
+        "localPoster": "images/movies/106_p2922031410.jpg"
+      }
+    ],
+    "latest": [
+      {
+        "id": 201,
+        "title": "超人",
+        "originalTitle": "Superman",
+        "rating": 6.4,
+        "ratingsCount": 12890,
+        "year": 2025,
+        "duration": "125分钟",
+        "genres": [
+          "动作",
+          "科幻",
+          "奇幻",
+          "冒险"
+        ],
+        "directors": [
+          "詹姆斯·古恩"
+        ],
+        "casts": [
+          "大卫·科伦斯韦",
+          "瑞秋·布罗斯纳安",
+          "尼古拉斯·霍尔特",
+          "伊莎贝拉·默塞德"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2922810871.jpg",
+        "summary": "超人的全新起源故事。",
+        "releaseDate": "2025-07-11",
+        "status": "coming",
+        "localPoster": "images/movies/201_p2922810871.jpg"
+      },
+      {
+        "id": 202,
+        "title": "恶意",
+        "originalTitle": "Malice",
+        "rating": 6.0,
+        "ratingsCount": 4560,
+        "year": 2024,
+        "duration": "98分钟",
+        "genres": [
+          "悬疑",
+          "惊悚"
+        ],
+        "directors": [
+          "詹姆斯·瓦特金斯"
+        ],
+        "casts": [
+          "科林·法瑞尔",
+          "朱迪·特纳-史密斯",
+          "凯蒂·麦克格雷斯",
+          "詹姆斯·瓦特金斯"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2922209114.jpg",
+        "summary": "一个关于恶意与复仇的故事。",
+        "releaseDate": "2024-11-08",
+        "status": "hot",
+        "localPoster": "images/movies/202_p2922209114.jpg"
+      }
+    ],
+    "highRated": [
+      {
+        "id": 301,
+        "title": "唐顿庄园3",
+        "originalTitle": "Downton Abbey: The Grand Finale",
+        "rating": 8.6,
+        "ratingsCount": 23450,
+        "year": 2025,
+        "duration": "125分钟",
+        "genres": [
+          "剧情"
+        ],
+        "directors": [
+          "西蒙·柯蒂斯"
+        ],
+        "casts": [
+          "休·博纳维尔",
+          "米歇尔·道克瑞",
+          "伊丽莎白·麦戈文",
+          "玛吉·史密斯"
+        ],
+        "countries": [
+          "英国",
+          "美国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2922967026.jpg",
+        "summary": "唐顿庄园的最终篇章。",
+        "releaseDate": "2025-09-12",
+        "status": "coming",
+        "localPoster": "images/movies/301_p2922967026.jpg"
+      },
+      {
+        "id": 302,
+        "title": "初吻",
+        "originalTitle": "First Kiss",
+        "rating": 8.5,
+        "ratingsCount": 18900,
+        "year": 2024,
+        "duration": "110分钟",
+        "genres": [
+          "爱情",
+          "青春"
+        ],
+        "directors": [
+          "岩井俊二"
+        ],
+        "casts": [
+          "新垣结衣",
+          "菅田将晖",
+          "长泽雅美",
+          "小栗旬"
+        ],
+        "countries": [
+          "日本"
+        ],
+        "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2915797811.jpg",
+        "summary": "关于初恋的美好回忆。",
+        "releaseDate": "2024-12-01",
+        "status": "hot",
+        "localPoster": "images/movies/302_p2915797811.jpg"
+      }
+    ],
+    "hiddenGems": [
+      {
+        "id": 401,
+        "title": "关于约会的一切",
+        "originalTitle": "All About Dating",
+        "rating": 8.1,
+        "ratingsCount": 6780,
+        "year": 2024,
+        "duration": "95分钟",
+        "genres": [
+          "喜剧",
+          "爱情"
+        ],
+        "directors": [
+          "伍迪·艾伦"
+        ],
+        "casts": [
+          "提莫西·查拉梅",
+          "艾丽·范宁",
+          "赛琳娜·戈麦斯",
+          "裘德·洛"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924636647.jpg",
+        "summary": "现代都市中的约会故事。",
+        "releaseDate": "2024-09-27",
+        "status": "hot",
+        "localPoster": "images/movies/401_p2924636647.jpg"
+      },
+      {
+        "id": 402,
+        "title": "夜班",
+        "originalTitle": "Night Shift",
+        "rating": 8.4,
+        "ratingsCount": 8920,
+        "year": 2024,
+        "duration": "88分钟",
+        "genres": [
+          "剧情"
+        ],
+        "directors": [
+          "是枝裕和"
+        ],
+        "casts": [
+          "阿部宽",
+          "宫崎葵",
+          "小田切让",
+          "松隆子"
+        ],
+        "countries": [
+          "日本"
+        ],
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924388657.jpg",
+        "summary": "夜班工作者的温情故事。",
+        "releaseDate": "2024-10-04",
+        "status": "hot",
+        "localPoster": "images/movies/402_p2924388657.jpg"
+      }
+    ]
+  },
+  "weeklyChart": [
+    {
+      "rank": 1,
+      "title": "唐顿庄园3",
+      "rating": 8.6,
+      "movieId": 301
+    },
+    {
+      "rank": 2,
+      "title": "从前的光景",
+      "rating": 7.8,
+      "movieId": 102
+    },
+    {
+      "rank": 3,
+      "title": "接近终点",
+      "rating": 7.5,
+      "movieId": 501
+    },
+    {
+      "rank": 4,
+      "title": "无双",
+      "rating": 7.3,
+      "movieId": 601
+    },
+    {
+      "rank": 5,
+      "title": "震耳欲聋",
+      "rating": 7.4,
+      "movieId": 1
+    },
+    {
+      "rank": 6,
+      "title": "毕正明的证明",
+      "rating": 7.4,
+      "movieId": 5
+    },
+    {
+      "rank": 7,
+      "title": "三国的星空第一部",
+      "rating": 7.1,
+      "movieId": 701
+    },
+    {
+      "rank": 8,
+      "title": "点爱成金",
+      "rating": 7.4,
+      "movieId": 801
+    },
+    {
+      "rank": 9,
+      "title": "妄人妄途",
+      "rating": 7.3,
+      "movieId": 901
+    },
+    {
+      "rank": 10,
+      "title": "火烧天堂镇",
+      "rating": 7.1,
+      "movieId": 1001
+    }
+  ],
+  "hotLists": [
+    {
+      "id": 1,
+      "title": "国产良心剧（2010年之后）",
+      "author": "豆瓣用户",
+      "movieCount": 156,
+      "followerCount": 564,
+      "description": "精选2010年后的优质国产剧"
+    },
+    {
+      "id": 2,
+      "title": "那些年被低估的电影",
+      "author": "影迷小王",
+      "movieCount": 89,
+      "followerCount": 342,
+      "description": "值得一看但被忽视的好电影"
+    },
+    {
+      "id": 3,
+      "title": "治愈系电影推荐",
+      "author": "温暖阳光",
+      "movieCount": 67,
+      "followerCount": 298,
+      "description": "温暖人心的治愈系电影"
+    },
+    {
+      "id": 4,
+      "title": "悬疑片爱好者必看",
+      "author": "推理迷",
+      "movieCount": 45,
+      "followerCount": 187,
+      "description": "烧脑悬疑片合集"
+    }
+  ],
+  "hotReviews": [
+    {
+      "id": 1,
+      "movieTitle": "链锯人 剧场版：蕾塞篇",
+      "movieId": 1101,
+      "reviewTitle": "蕾塞是何时喜欢上电次的？",
+      "author": "ブラシカ",
+      "rating": 4,
+      "usefulCount": 234,
+      "summary": "个人觉得是在电次对蕾塞提出私奔邀约的时候..."
+    },
+    {
+      "id": 2,
+      "movieTitle": "浪浪人生",
+      "movieId": 1201,
+      "reviewTitle": "无题",
+      "author": "静姝",
+      "rating": 5,
+      "usefulCount": 189,
+      "summary": "这一部一定是给五星啊！因为有我最爱的丞丞..."
+    },
+    {
+      "id": 3,
+      "movieTitle": "异教徒",
+      "movieId": 1301,
+      "reviewTitle": "8.0分 《异教徒》 ------ 信仰的尽头是迷信？",
+      "author": "弯弓",
+      "rating": 4,
+      "usefulCount": 156,
+      "summary": "警察豪伊收到一封来自夏岛的信，得知岛上有女孩失踪..."
+    },
+    {
+      "id": 4,
+      "movieTitle": "志愿军：浴血和平",
+      "movieId": 8,
+      "reviewTitle": "这叫战争片？",
+      "author": "PrinceIMAX",
+      "rating": 2,
+      "usefulCount": 98,
+      "summary": "首先，上一部才好不容易把这系列拉回正常线上的水准..."
+    }
+  ],
+  "hotTV": {
+    "all": [
+      {
+        "id": 2001,
+        "title": "行骗天下KR",
+        "rating": 5.8,
+        "year": 2024,
+        "episodes": 12,
+        "genres": [
+          "剧情",
+          "犯罪"
+        ],
+        "countries": [
+          "韩国"
+        ],
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924218592.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2001_p2924218592.jpg"
+      },
+      {
+        "id": 2002,
+        "title": "金昭玉醉",
+        "rating": 0,
+        "year": 2024,
+        "episodes": 28,
+        "genres": [
+          "古装",
+          "爱情"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925342957.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2002_p2925342957.jpg"
+      },
+      {
+        "id": 2003,
+        "title": "浪漫匿名者",
+        "rating": 0,
+        "year": 2024,
+        "episodes": 16,
+        "genres": [
+          "爱情",
+          "都市"
+        ],
+        "countries": [
+          "韩国"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924276900.jpg",
+        "status": "连载中",
+        "localPoster": "images/tv/2003_p2924276900.jpg"
+      }
+    ],
+    "cn": [
+      {
+        "id": 2101,
+        "title": "猎豹",
+        "rating": 0,
+        "year": 2024,
+        "episodes": 24,
+        "genres": [
+          "犯罪",
+          "悬疑"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2926062850.jpg",
+        "status": "连载中",
+        "localPoster": "images/tv/2101_p2926062850.jpg"
+      },
+      {
+        "id": 2102,
+        "title": "暴风圈",
+        "rating": 4.2,
+        "year": 2024,
+        "episodes": 30,
+        "genres": [
+          "都市",
+          "情感"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924431356.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2102_p2924431356.jpg"
+      }
+    ],
+    "variety": [
+      {
+        "id": 2201,
+        "title": "守护解放西6",
+        "rating": 0,
+        "year": 2024,
+        "episodes": 10,
+        "genres": [
+          "纪录片"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925814116.jpg",
+        "status": "连载中",
+        "localPoster": "images/tv/2201_p2925814116.jpg"
+      }
+    ],
+    "us": [
+      {
+        "id": 2301,
+        "title": "怪兽8号 第二季",
+        "rating": 6.8,
+        "year": 2024,
+        "episodes": 11,
+        "genres": [
+          "动画",
+          "动作"
+        ],
+        "countries": [
+          "日本"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2923239879.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2301_p2923239879.jpg"
+      },
+      {
+        "id": 2302,
+        "title": "闹鬼酒店 第一季",
+        "rating": 8.3,
+        "year": 2024,
+        "episodes": 8,
+        "genres": [
+          "恐怖",
+          "悬疑"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924208596.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2302_p2924208596.jpg"
+      }
+    ],
+    "jp": [
+      {
+        "id": 2401,
+        "title": "弥留之国的爱丽丝 第三季",
+        "rating": 6.4,
+        "year": 2024,
+        "episodes": 8,
+        "genres": [
+          "科幻",
+          "悬疑"
+        ],
+        "countries": [
+          "日本"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2925216328.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2401_p2925216328.jpg"
+      },
+      {
+        "id": 2402,
+        "title": "和平使者 第二季",
+        "rating": 8.0,
+        "year": 2024,
+        "episodes": 8,
+        "genres": [
+          "动作",
+          "喜剧"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2923697641.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2402_p2923697641.jpg"
+      }
+    ],
+    "kr": [
+      {
+        "id": 2501,
+        "title": "许我耀眼",
+        "rating": 6.5,
+        "year": 2024,
+        "episodes": 32,
+        "genres": [
+          "爱情",
+          "都市"
+        ],
+        "countries": [
+          "中国大陆"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2914332534.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2501_p2914332534.jpg"
+      },
+      {
+        "id": 2502,
+        "title": "回魂计",
+        "rating": 7.1,
+        "year": 2024,
+        "episodes": 16,
+        "genres": [
+          "悬疑",
+          "惊悚"
+        ],
+        "countries": [
+          "韩国"
+        ],
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2924847690.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2502_p2924847690.jpg"
+      }
+    ],
+    "animation": [
+      {
+        "id": 2601,
+        "title": "漫威丧尸",
+        "rating": 6.6,
+        "year": 2024,
+        "episodes": 8,
+        "genres": [
+          "动画",
+          "动作"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2925279355.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2601_p2925279355.jpg"
+      },
+      {
+        "id": 2602,
+        "title": "星期三 第二季",
+        "rating": 8.4,
+        "year": 2024,
+        "episodes": 8,
+        "genres": [
+          "奇幻",
+          "喜剧"
+        ],
+        "countries": [
+          "美国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924118236.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2602_p2924118236.jpg"
+      }
+    ],
+    "documentary": [
+      {
+        "id": 2701,
+        "title": "流人 第五季",
+        "rating": 9.1,
+        "year": 2024,
+        "episodes": 6,
+        "genres": [
+          "剧情",
+          "惊悚"
+        ],
+        "countries": [
+          "英国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924888795.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2701_p2924888795.jpg"
+      },
+      {
+        "id": 2702,
+        "title": "万物生灵 第六季",
+        "rating": 9.3,
+        "year": 2024,
+        "episodes": 6,
+        "genres": [
+          "剧情"
+        ],
+        "countries": [
+          "英国"
+        ],
+        "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2926214816.jpg",
+        "status": "完结",
+        "localPoster": "images/tv/2702_p2926214816.jpg"
+      }
+    ]
+  }
+}

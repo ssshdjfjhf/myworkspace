@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悬浮效果和点击跳转测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .test-container { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
+        .test-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .test-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .poster {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .test-card:hover .poster {
+            transform: scale(1.05);
+        }
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+        .test-card:hover .title {
+            color: #42bd56;
+        }
+        .rating {
+            background: #42bd56;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: inline-block;
+            transition: background 0.2s ease;
+        }
+        .test-card:hover .rating {
+            background: #3aa847;
+        }
+        .movie-tooltip {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 1.4;
+            width: 220px;
+            z-index: 1000;
+            display: none;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            transform: translateY(-50%);
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .test-card:hover .movie-tooltip {
+            display: block;
+            opacity: 1;
+        }
+        .tooltip-content h4 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 6px;
+        }
+        .tooltip-content p {
+            margin: 4px 0;
+            font-size: 11px;
+            color: #e0e0e0;
+        }
+        .tooltip-content strong {
+            color: #a8d8a8;
+            font-weight: normal;
+        }
+        .movie-tooltip::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -6px;
+            transform: translateY(-50%);
+            border-width: 6px 6px 6px 0;
+            border-style: solid;
+            border-color: transparent rgba(0, 0, 0, 0.95) transparent transparent;
+        }
+        .status-indicator {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .status-indicator.success {
+            background: #e8f5e8;
+            color: #2d5a2d;
+            border: 1px solid #c3e6c3;
+        }
+        .status-indicator.error {
+            background: #ffeaea;
+            color: #d42c2c;
+            border: 1px solid #ffcdd2;
+        }
+        .status-indicator.info {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+        }
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .instructions h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .instructions ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+            color: #666;
+        }
+        .feature-demo {
+            display: inline-block;
+            background: #42bd56;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>🎬 悬浮效果和点击跳转功能测试</h1>
+        <h2>测试功能：</h2>
+        <ul>
+            <li><strong>鼠标悬浮效果</strong> <span class="feature-demo">已启用</span> - 鼠标指针变为手型，显示悬浮信息框</li>
+            <li><strong>悬浮信息展示</strong> <span class="feature-demo">已启用</span> - 显示电影名称、上映时间、类型、国家、导演、主演</li>
+            <li><strong>点击跳转功能</strong> <span class="feature-demo">已启用</span> - 点击图片或标题跳转到豆瓣详情页</li>
+            <li><strong>动画效果</strong> <span class="feature-demo">已启用</span> - 卡片上浮、阴影加深、图片缩放</li>
+        </ul>
+        <p><strong>操作说明：</strong></p>
+        <ul>
+            <li>将鼠标悬停在电影卡片上查看悬浮信息</li>
+            <li>点击电影卡片（图片或标题）跳转到详情页</li>
+            <li>观察鼠标指针变化和动画效果</li>
+        </ul>
+    </div>
+
+    <h2>测试电影卡片：</h2>
+    <div class="test-container">
+        <div class="test-card" data-detail-url="https://movie.douban.com/subject/37107063/?from=showing" onclick="handleCardClick(this)">
+            <div class="poster">震耳欲聋</div>
+            <div class="title">震耳欲聋</div>
+            <div class="rating">7.4</div>
+            <div class="movie-tooltip">
+                <div class="tooltip-content">
+                    <h4>震耳欲聋</h4>
+                    <p><strong>上映时间：</strong>2024-10-01</p>
+                    <p><strong>类型：</strong>剧情 / 犯罪</p>
+                    <p><strong>制片国家：</strong>中国大陆</p>
+                    <p><strong>导演：</strong>张艺谋</p>
+                    <p><strong>主演：</strong>雷佳音 / 杨幂 / 于和伟 / 佟丽娅</p>
+                    <p><strong>片长：</strong>118分钟</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-card" data-detail-url="https://movie.douban.com/subject/36176155/?from=showing" onclick="handleCardClick(this)">
+            <div class="poster">一战再战</div>
+            <div class="title">一战再战</div>
+            <div class="rating">暂无评分</div>
+            <div class="movie-tooltip">
+                <div class="tooltip-content">
+                    <h4>一战再战</h4>
+                    <p><strong>上映时间：</strong>2024-09-30</p>
+                    <p><strong>类型：</strong>动作 / 战争</p>
+                    <p><strong>制片国家：</strong>中国大陆</p>
+                    <p><strong>导演：</strong>林超贤</p>
+                    <p><strong>主演：</strong>彭于晏 / 王彦霖 / 辛芷蕾 / 王大陆</p>
+                    <p><strong>片长：</strong>105分钟</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-card" data-detail-url="" onclick="handleCardClick(this)">
+            <div class="poster">测试无链接</div>
+            <div class="title">测试无链接</div>
+            <div class="rating">0.0</div>
+            <div class="movie-tooltip">
+                <div class="tooltip-content">
+                    <h4>测试无链接</h4>
+                    <p><strong>上映时间：</strong>2024-12-01</p>
+                    <p><strong>类型：</strong>测试 / 演示</p>
+                    <p><strong>制片国家：</strong>测试国家</p>
+                    <p><strong>导演：</strong>测试导演</p>
+                    <p><strong>主演：</strong>测试演员</p>
+                    <p><strong>片长：</strong>90分钟</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="status-display"></div>
+
+    <script>
+        let clickCount = 0;
+
+        function handleCardClick(card) {
+            clickCount++;
+            const detailUrl = card.dataset.detailUrl;
+            const title = card.querySelector('.title').textContent;
+
+            if (detailUrl && detailUrl !== '') {
+                // 模拟跳转（实际项目中使用window.open）
+                updateStatus(`🎬 正在跳转到豆瓣详情页: ${title}`, 'success');
+                console.log(`跳转到: ${detailUrl}`);
+
+                // 实际跳转（取消注释以启用）
+                // window.open(detailUrl, '_blank');
+            } else {
+                updateStatus(`❌ ${title} 暂无详情页面`, 'error');
+            }
+        }
+
+        function updateStatus(message, type) {
+            const statusDiv = document.getElementById('status-display');
+            const timestamp = new Date().toLocaleTimeString();
+
+            statusDiv.innerHTML = `
+                <div class="status-indicator ${type}">
+                    <strong>[${timestamp}]</strong> ${message}
+                    <br><small>点击次数: ${clickCount}</small>
+                </div>
+            `;
+
+            // 3秒后清除状态
+            setTimeout(() => {
+                statusDiv.innerHTML = '';
+            }, 3000);
+        }
+
+        // 添加鼠标进入和离开事件监听
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.test-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    updateStatus('🖱️ 鼠标悬停在电影卡片上', 'info');
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    updateStatus('👋 鼠标离开电影卡片', 'info');
+                });
+            });
+
+            updateStatus('✅ 测试页面加载完成，请将鼠标悬停在电影卡片上测试效果', 'success');
+        });
+    </script>
+</body>
+</html>
